@@ -61,5 +61,7 @@ class ProductPriceController extends Controller
     public function destroy(ProductPrice $productPrice)
     {
         //
+        $this->productPriceService->delete($productPrice);
+        return response()->json(null, 204);
     }
 }
